@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- config.xml -->
+<ParametriConfigurazioneXML numeroRighe="16" ipClient="127.0.0.1" ipServerLog="127.0.0.1" portaServerLog="6789">
+  <font>Segoe UI</font>
+  <dimensioneFont>11.0</dimensioneFont>
+  <dimensioni>
+    <double>970.0</double>
+    <double>650.0</double>
+  </dimensioni>
+  <coloreSfondo>ALICEBLUE</coloreSfondo>
+</ParametriConfigurazioneXML>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- log.xml -->
+<LogAttivitaXML nomeEvento="Apertura applicazione" indirizzoIpClient="127.0.0.1" dataOraCorrente="06-13-2016 10:39:37"/>
+<LogAttivitaXML nomeEvento="Pressione del pulsante elimina" indirizzoIpClient="127.0.0.1" dataOraCorrente="06-13-2016 10:39:43"/>
+<LogAttivitaXML nomeEvento="Pressione del pulsante annulla" indirizzoIpClient="127.0.0.1" dataOraCorrente="06-13-2016 10:39:45"/>
+<LogAttivitaXML nomeEvento="Pressione del pulsante elimina" indirizzoIpClient="127.0.0.1" dataOraCorrente="06-13-2016 10:39:46"/>
+<LogAttivitaXML nomeEvento="Pressione del pulsante conferma" indirizzoIpClient="127.0.0.1" dataOraCorrente="06-13-2016 10:39:47"/>
+<LogAttivitaXML nomeEvento="Chiusura applicazione" indirizzoIpClient="127.0.0.1" dataOraCorrente="06-13-2016 10:40:09"/>
+<LogAttivitaXML nomeEvento="Apertura applicazione" indirizzoIpClient="127.0.0.1" dataOraCorrente="04-10-2017 19:14:28"/>
+<LogAttivitaXML nomeEvento="Chiusura applicazione" indirizzoIpClient="127.0.0.1" dataOraCorrente="04-10-2017 19:14:49"/>
