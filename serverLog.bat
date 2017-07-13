@@ -2,7 +2,7 @@
 
 REM Change these two directories as needed
 set JDKBIN="C:\Program Files\Java\jdk1.8.0_91\bin"
-set PROJECT_DIR=G:\OneDrive\Ingegneria\Altro\Triennale\Programmazione\PROJECT_DIR\Portafoglio
+set PROJECT_DIR=G:\OneDrive\Ingegneria\Altro\Triennale\Programmazione\Progetto\Portafoglio
 
 REM Compiling
 %JDKBIN%\javac %PROJECT_DIR%\src\ServerLogAttivitaXML.java -cp %PROJECT_DIR%\build\classes -d %PROJECT_DIR%\build\classes

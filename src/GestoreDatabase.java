@@ -12,7 +12,7 @@ public class GestoreDatabase { // 00)
     public static void ottieniVoci(ObservableList<Voce> voci, LocalDate inizio, LocalDate fine, String cerca) { // 03)
         String query = costruisciQuery("SELECT * FROM portafoglio", inizio, fine, cerca); // 04)
         
-        try(Connection co = DriverManager.getConnection("jdbc:mysql://localhost:3306/portafoglio?user=root&password="); // 05)
+        try(Connection co = DriverManager.getConnection("jdbc:mysql://localhost:3306/portafoglio?user=root&password=root"); // 05)
             PreparedStatement ps = co.prepareStatement(query); // 06)
         ) {
             int i = 1; // 07)
@@ -32,7 +32,7 @@ public class GestoreDatabase { // 00)
     }
         
     public static void ottieniNomiVoci(ObservableList<String> voci) { // 15)
-        try(Connection co = DriverManager.getConnection("jdbc:mysql://localhost:3306/portafoglio?user=root&password="); // 05)
+        try(Connection co = DriverManager.getConnection("jdbc:mysql://localhost:3306/portafoglio?user=root&password=root"); // 05)
             Statement st = co.createStatement(); // 16)
         ) {
             ResultSet rs = st.executeQuery("SELECT DISTINCT(nome) FROM portafoglio ORDER BY nome"); // 11)
@@ -48,7 +48,7 @@ public class GestoreDatabase { // 00)
     public static void eliminaVoce(InterfacciaPortafoglio interfacciaPortafoglio) { // 20)
         Voce voce = interfacciaPortafoglio.getStorico().getTabella().getSelectionModel().getSelectedItem(); // 21)
         
-        try(Connection co = DriverManager.getConnection("jdbc:mysql://localhost:3306/portafoglio?user=root&password="); // 05)
+        try(Connection co = DriverManager.getConnection("jdbc:mysql://localhost:3306/portafoglio?user=root&password=root"); // 05)
             PreparedStatement ps = co.prepareStatement("DELETE FROM portafoglio WHERE id = ?"); // 06)
         ) { 
             ps.setInt(1, voce.getId()); // 22)
@@ -85,7 +85,7 @@ public class GestoreDatabase { // 00)
     }
     
     public static double ottieniSaldo() { // 34)
-        try(Connection co = DriverManager.getConnection("jdbc:mysql://localhost:3306/portafoglio?user=root&password="); // 05)
+        try(Connection co = DriverManager.getConnection("jdbc:mysql://localhost:3306/portafoglio?user=root&password=root"); // 05)
             Statement st = co.createStatement(); // 16)
         ) {
             ResultSet rs = st.executeQuery("SELECT ROUND(SUM(importo), 2) AS saldo FROM portafoglio"); // 11)
@@ -107,7 +107,7 @@ public class GestoreDatabase { // 00)
             inizio, fine, cerca
         );
         
-        try(Connection co = DriverManager.getConnection("jdbc:mysql://localhost:3306/portafoglio?user=root&password="); // 05)
+        try(Connection co = DriverManager.getConnection("jdbc:mysql://localhost:3306/portafoglio?user=root&password=root"); // 05)
             PreparedStatement ps = co.prepareStatement(query); // 06)
         ) {
             int i = 1; // 07)
@@ -131,7 +131,7 @@ public class GestoreDatabase { // 00)
             String query = "INSERT INTO portafoglio VALUES " + new String(new char[voci.size()]).replace("\0", "(?, ?, ?, ?),"); // 44)
             query = query.substring(0, query.length() - 1); // 45)
             
-            try(Connection co = DriverManager.getConnection("jdbc:mysql://localhost:3306/portafoglio?user=root&password="); // 05)
+            try(Connection co = DriverManager.getConnection("jdbc:mysql://localhost:3306/portafoglio?user=root&password=root"); // 05)
                 PreparedStatement ps = co.prepareStatement(query); // 06)
             ) {
                 int i = 1; // 46)
